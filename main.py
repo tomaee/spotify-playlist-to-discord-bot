@@ -79,10 +79,12 @@ for i,each_song in enumerate(songs):
 
 random.shuffle(song_list)
 
-
+i=0
 for each_song in song_list:
     payload = dict(content = f"!play {each_song}")
     response = post(request_url, json = payload, headers = authorization)
+    print(i)
+    i+=1
     time.sleep(4)
 
 
